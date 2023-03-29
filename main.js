@@ -1,14 +1,7 @@
 //Start Page
 
-//Create ‘Start Quiz’ button. 
-
-const quizContainer = document.querySelector(".quiz-container");
-const startQuiz = document.createElement("button");
-startQuiz.classList.add("startBtn");
-startQuiz.textContent = "Start Quiz";
-quizContainer.appendChild(startQuiz);
-
 //Set Start Quiz button to disabled
+let startBtn = document.querySelector(".startBtn");
 document.querySelector(".startBtn").disabled = true;
 
 //Select name input field
@@ -21,9 +14,15 @@ inputName.addEventListener("input", function(e){
     // If name matches regex, button is enabled and user can start game
     if(inputName.value.match(regex)){
         document.querySelector(".startBtn").disabled = false;
+        //call a function here that makes button load to new page?
     } 
     else {
         //Button is disabled 
         document.querySelector(".startBtn").disabled = true;
     }
+});
+
+//Load new page of questions and answers in the same tab when start button is clicked. 
+startBtn.addEventListener("click", function(e){
+    window.open("quizques.html", "_self");
 });
