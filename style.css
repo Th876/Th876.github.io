@@ -1,1 +1,48 @@
-//start here
+/* Custom colors */
+
+:root {
+--crimson: #790B25;
+--green: #007200;
+--lightgray: #EEEEEE;
+--darkgray: #ABABAB;
+}
+
+/* style body */
+
+/* Style Start Quiz button */
+.startBtn {
+ background-color: var(--green);   
+ height: 50px;
+ color: white;
+ text-align: center;
+ cursor: pointer;
+ padding: 10px;
+ font-size: 1.3rem;
+ font-weight: bold;
+}
+
+/* Style disabled button */
+.startBtn:disabled {
+    background-color:  var(--lightgray);
+    color: var(--darkgray);
+    cursor: not-allowed;
+}
+
+/* Style End Quiz buttons */
+.endBtn {
+    background-color: var(--crimson);
+    height: 50px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+   }
+
+/* Style name input container */
+.nameInputBox {
+    border: 2px solid black;
+    height: 100px;
+    width: 250px;
+}
