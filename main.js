@@ -1,8 +1,15 @@
-//Start Page
+/*-------------------------Start Page-------------------------*/
 
-//Set Start Quiz button to disabled
+//Set Start game button to disabled
 let startBtn = document.querySelector(".startBtn");
 document.querySelector(".startBtn").disabled = true;
+
+//get start page container
+let startContainer = document.querySelector("#start-container");
+
+//Hide quiz page
+let quizContainer = document.querySelector("#quiz-container");
+quizContainer.style.visibility = "hidden";
 
 //Select name input field
 const inputName = document.getElementById("input-name");
@@ -22,7 +29,19 @@ inputName.addEventListener("input", function(e){
     }
 });
 
-//Load new page of questions and answers in the same tab when start button is clicked. 
+//Display Quiz page when Start game button is clicked 
 startBtn.addEventListener("click", function(e){
-    window.open("quizques.html", "_self");
+    startContainer.remove();
+    quizContainer.style.visibility = "visible";
+});
+
+
+/*-------------------------Quiz Page-------------------------*/
+//Get input (user's name) and display on quiz game page
+startBtn.addEventListener("click", function(e){ 
+    if(inputName.value !== " ") {
+        let name = document.querySelector(".player1")
+        name.textContent = "Player 1: " + inputName.value;
+        quizContainer.appendChild(name);
+    }
 });
