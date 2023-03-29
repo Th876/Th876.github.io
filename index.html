@@ -12,31 +12,35 @@
    <div id="start-container">
     <h1 class="main-heading">The Best Movie Trivia Game</h1>
     <div class="nameInputBox">
-        <!-- center text -->
         <p>Enter Name to Play</p> 
         <input type="text" id="input-name" placeholder="Anna">
     </div>
-    <button class="startBtn">Start Game</button>
+    <div class="center-btn"><button class="startBtn">Start Game</button></div>
+    
     </div>
 
     <!-- Quiz section -->
     <div id="quiz-container">
         <!-- Quiz questions page -->
-        <h1 class="sub-heading">Are You a True Movie Fan?</h1>
-        <p>Can&#x27;t return to previous question. Choose wisely!</p>
+        <h2 class="sub-heading">Are You a True Movie Fan?</h2>
+        <p class="quiz-instruction">Can&#x27;t return to previous question. Choose wisely!</p>
         
         <!-- Space to update player name based on input, e.g Player 1: Anne -->
+        <div class="playernames playerscore">
         <p class="player1"></p>
         <p class="player2">Player 2: Computer</p>
+        
         <!-- Space to update rounds, e.g Round One -->
-        <p class="round-title"></p>
+        <p class="round-title">[will generate new round text here]</p>
+        </div>
     
     <!-- Question and answers container-->
-        <div class="ques-container">
+        <div id="ques-container">
             <!-- Space to load questions and answers -->
             <p></p>
         </div>
-        <button class="endBtn">End Game</button>
+        <div class="center-btn"><button class="end-btn">End Game</button></div>
+        
     </div>
     
     <script src="main.js"></script>

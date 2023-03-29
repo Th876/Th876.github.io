@@ -42,6 +42,8 @@ startBtn.addEventListener("click", function(e){
     if(inputName.value !== " ") {
         let name = document.querySelector(".player1")
         name.textContent = "Player 1: " + inputName.value;
-        quizContainer.appendChild(name);
+        let playerNames = document.querySelector(".playernames");
+        playerNames.appendChild(name);
     }
 });
+

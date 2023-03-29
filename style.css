@@ -1,15 +1,37 @@
-/* Custom colors */
+/* Add fonts here */
 
+
+/* Custom colors */
 :root {
 --crimson: #790B25;
 --green: #007200;
 --lightgray: #EEEEEE;
 --darkgray: #ABABAB;
+--black: #000000;
 }
 
 /* style body */
-/* #quiz-container & #start-container  */
+body {
+    background-color: #DFF2FF; 
+    color:  var(--black);
+    font-size: 1.5rem;
+    height: 100vh;
+    width: 100vw; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
+#start-container{
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 3.813rem;
+}
 /* Style Start Quiz button */
 .startBtn {
  background-color: var(--green);   
@@ -29,8 +51,59 @@
     cursor: not-allowed;
 }
 
+/* Style name input container */
+.nameInputBox {
+    border: 2px solid var(--black); 
+    height: 350px;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.nameInputBox p {
+    margin-top: 80px;
+}
+
+/*--------------------- Quiz Page--------------------- */
+#quiz-container {
+    background-color: pink;
+    height: 100vh;
+    width: 100vw; 
+}
+
+.sub-heading, .quiz-instruction {
+    text-align: center;
+}
+
+/* style so that player1 comes before player2*/
+.playernames {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    color: var(--black);
+    margin-top: 50px;
+    background-color: white;
+}
+
+#ques-container {
+    border: 2px solid var(--black);
+    height: 350px;
+    width: 700px;
+    background-color: var(--lightgray);
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+.center-btn {
+    margin-top: 25px;
+    text-align: center;
+}
+
 /* Style End Quiz buttons */
-.endBtn {
+.end-btn {
     background-color: var(--crimson);
     height: 50px;
     color: white;
@@ -40,10 +113,3 @@
     font-size: 1.3rem;
     font-weight: bold;
    }
-
-/* Style name input container */
-.nameInputBox {
-    border: 2px solid black;
-    height: 100px;
-    width: 250px;
-}
