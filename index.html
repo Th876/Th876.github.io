@@ -26,23 +26,38 @@
         <p class="quiz-instruction">Can&#x27;t return to previous question. Choose wisely!</p>
         
         <!-- Space to update player name based on input, e.g Player 1: Anne -->
-        <div class="playernames playerscore">
+        <div class="playername">
         <p class="player1"></p>
-        <p class="player2">Player 2: Computer</p>
-        
+       
+
         <!-- Space to update rounds, e.g Round One -->
-        <p class="round-title">[will generate new round text here]</p>
+        <p class="round-title">[Generate new round here?]</p>
         </div>
-    
+
+         <!-- Space to update player's points -->
+        <div id="tallyPoints">
+            <div id="human-points">Score:
+                <span id="human-player-points">0</span>
+                <span> / </span>
+                <span id="human-total-points">0</span>
+            </div>
+        </div>
+        
     <!-- Question and answers container-->
+    <!-- space to generate questions -->
         <div id="ques-container">
-            <!-- Space to load questions and answers -->
-            <p></p>
+            <div id="quiz-questions"></div>
+
+            <!-- Space to generate answers -->
+            <button id="option-a"></button>
+            <button id="option-b"></button>
         </div>
         <div class="center-btn"><button class="end-btn">End Game</button></div>
         
     </div>
-    
+    <!-- <footer> -->
+        <!-- Copyright&copy;2023, The Best Movie Trivia Game. Designed by Tahaylia Higgins. All Rights Reserved -->
+    <!-- </footer> -->
     <script src="main.js"></script>
 </body>
 </html>

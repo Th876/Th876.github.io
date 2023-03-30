@@ -4,6 +4,7 @@
 /* Custom colors */
 :root {
 --crimson: #790B25;
+--red: #FF0000;
 --green: #007200;
 --lightgray: #EEEEEE;
 --darkgray: #ABABAB;
@@ -76,14 +77,19 @@ h1 {
     text-align: center;
 }
 
-/* style so that player1 comes before player2*/
-.playernames {
+/* style player name*/
+.playername {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-around;
     color: var(--black);
     margin-top: 50px;
     background-color: white;
+}
+
+#human-points {
+    display: flex;
+    justify-content: left;
+    margin-left: 200px;
 }
 
 #ques-container {
@@ -94,12 +100,46 @@ h1 {
     border: none;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
     margin-top: 25px;
 }
 
 .center-btn {
-    margin-top: 25px;
+    margin-top: 30px;
     text-align: center;
+}
+
+/* Center question and re-order */
+#quiz-questions {
+    padding: 25px 40px 0px 40px;
+    text-align: center;
+    margin-top: 10px;
+    order: 1;
+}
+
+/* Center answer option and re-order*/
+#option-a {
+    cursor: pointer;
+    border: 1px solid black;
+    width: 70%;
+    border-radius: 30px;
+    margin: 50px auto;
+    padding: 10px;
+    order: 2;
+    font-size: 1.2rem;
+}
+
+/* Center answer option and re-order*/
+#option-b{
+    cursor: pointer;
+    border: 1px solid black;
+    width: 70%;
+    border-radius: 30px;
+    margin: -15px auto;
+    padding: 10px;
+    order: 3;
+    font-size: 1.2rem;
 }
 
 /* Style End Quiz buttons */
@@ -112,4 +152,9 @@ h1 {
     padding: 10px;
     font-size: 1.3rem;
     font-weight: bold;
+   }
+
+   /*----------------------- FIX TO LOOK THE SAME ON EVERY PAGE----------------------- */
+   footer {
+    text-align: center;
    }
