@@ -43,8 +43,7 @@ startBtn.addEventListener("click", function(e){
     if(inputName.value !== " ") {
         let name = document.querySelector(".player1")
         name.textContent = "Player 1: " + inputName.value;
-        let playerNames = document.querySelector(".playernames");
-        playerName.appendChild(name);
+        // console.log(playerNames);
     }
     generateQuestions();
 });
@@ -119,8 +118,9 @@ const quizQuestions = document.querySelector("#quiz-questions");
 quesContainer.appendChild(quizQuestions);
 const optionA = document.getElementById("option-a");
 const optionB = document.getElementById("option-b");
-const humanPlayerPoints = document.querySelector("#human-player-points"); 
-const humanTotalPoints = document.querySelector("#human-total-points");
+let humanPoints = document.getElementById("human-points");
+let humanPlayerPoints = document.querySelector("#human-player-points"); 
+let humanTotalPoints = document.querySelector("#human-total-points");
 
 //Create function to generate questions and answers
 function generateQuestions() {
@@ -148,15 +148,20 @@ function generateQuestions() {
        //Create function to validate answers
     optionA.addEventListener("click", function(e) {
     //if user clicks the first option and it is correct, show green border
-    if(quiz[questionNow].answer === "option-a") {
-        points++;
-        optionA.style.border = "2px solid var(--green)";
-    }  
-    //if user clicks the first option and it is correct, show red border
-    else {
-        points+= 0;
-        optionA.style.border = "2px solid var(--red)"; 
-    }
+        if(quiz[questionNow].answer === "option-a") {
+            //increment points
+            points++;
+
+            // console.log(humanPoints.children); testing to see its children
+            humanPoints.children[0].textContent = points;
+            // console.log(points); testing to see if its incrementing
+            optionA.style.border = "2px solid var(--green)";
+        }  
+        //if user clicks the first option and it is correct, show red border
+        else {
+            optionA.style.border = "2px solid var(--red)"; 
+        }
+
 
        //Generate next question
        if(questionNow < lastQuestion) {
@@ -173,13 +178,14 @@ function generateQuestions() {
         optionB.addEventListener("click", function(e) {
             //if user clicks the first option and it is correct, show green border
                 if(quiz[questionNow].answer === "option-b") {
+                     //increment points
                     points++;
+                    humanPoints.children[0].textContent = points;
                     optionB.style.border = "2px solid var(--green)"; 
                } 
                //if user clicks the first option and it is correct, show red border
                else {
-                   points+= 0;
-                   optionB.style.border = "2px solid var(--red)"; 
+                optionB.style.border = "2px solid var(--red)"; 
                }
 
                 //Generate next question

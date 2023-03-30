@@ -83,13 +83,13 @@ h1 {
     justify-content: space-around;
     color: var(--black);
     margin-top: 50px;
+    padding-top: 5px;
     background-color: white;
 }
 
 #human-points {
     display: flex;
     justify-content: left;
-    margin-left: 200px;
 }
 
 #ques-container {
