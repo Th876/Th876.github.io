@@ -6,9 +6,20 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="/Th876.github.io/images/favicon.png">
       <link rel="stylesheet" href="style.css">
-      <title>Movie Trivia Game</title>
+      <title>The Best Movie Trivia Game</title>
    </head>
    <body>
+     <!-- Pop up box-->
+     <div id="pop-up">
+        <div class="pop-up-box">
+            <h2>Wow!</h2>
+            <p> You've Reached the End of This Round.<br>Do you want to Continue or End Game?</p>
+            <div class="pop-up-btns">
+                <button class="continue-btn">Continue</button>
+                <button class="endgame-btn">End Game</button>
+            </div>
+        </div>
+    </div>
       <!-- Start page -->
       <!-- Background Video -->
       <video src="/Th876.github.io/video/iconic-movies1.mp4" class="vid-background" autoplay loop muted>
@@ -24,9 +35,10 @@
 
       <!-- Quiz section -->
       <div id="quiz-container">
+
          <!-- Quiz questions page -->
          <h2 class="sub-heading">Are You a True Movie Fan <img src="/Th876.github.io/images/clapperboard.png" alt="clapper board" class="clapper-board"> ?</h2>
-         <p class="quiz-instruction">Can&#x27;t return to previous question. Break a leg!</p>
+         <p class="quiz-instruction">Three Rounds. Can&#x27;t Return to Previous Questions. Break a Leg or Two!</p>
          
          <!-- Space to update player name based on input, e.g Player 1: Anne -->
          <div class="player-stats">
@@ -52,8 +64,10 @@
             <button id="option-a"></button>
             <button id="option-b"></button>
          </div>
-         <div class="center-btn"><button class="end-btn">Exit Game</button></div>
+         <div class="center-btn"><button class="exit-game-btn">Exit Game</button></div>
       </div>
+
+       <!-- Footer section-->
       <footer>
          Copyright&copy;2023, The Best Movie Trivia Game. Designed by Tahaylia Higgins. All Rights Reserved
       </footer>

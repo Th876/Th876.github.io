@@ -4,8 +4,11 @@
 let startBtn = document.querySelector(".startBtn");
 document.querySelector(".startBtn").disabled = true;
 
-//Get start page container
+//Select start page container
 let startContainer = document.querySelector("#start-container");
+
+//Select footer
+let footer = document.querySelector("footer");
 
 //Hide quiz page
 let quizContainer = document.querySelector("#quiz-container");
@@ -31,16 +34,16 @@ inputName.addEventListener("input", function (e) {
   }
 });
 
+
 //Display Quiz page when Start game button is clicked
 startBtn.addEventListener("click", function (e) {
   startContainer.style.visibility = "hidden";
   quizContainer.style.visibility = "visible";
   videoBkground.style.visibility = "hidden";
+  hidePopUp();
 });
 
-/*-------------------------Quiz Page-------------------------*/
-
-//Get input (user's name) and display on quiz game page
+/*-------------------------Quiz Page-------------------------*///Get input (user's name) and display on quiz game page
 startBtn.addEventListener("click", function (e) {
   if (inputName.value !== " ") {
     let name = document.querySelector(".playername");
@@ -251,8 +254,9 @@ let userPoints = document.querySelector("#user-points");
 let playerPointsEarned = document.querySelector("#player-points-earned"); 
 let totalPoints = document.querySelector("#total-points");
 let roundTitle = document.querySelector(".round-title");
-const exitGame = document.querySelector(".end-btn");
+const exitGame = document.querySelector(".exit-game-btn");
 const quizBtn = document.querySelector(".quiz-btn");
+const continueBtn = document.querySelector(".continue-btn");
 
 
 //Set counter for question and points
@@ -346,6 +350,43 @@ optionB.addEventListener("click", function (e) {
   }
 });
 
+/*-------------------------Pop Up Box Features-------------------------*/
+//Hide pop up box at the start of the game
+let popUp = document.querySelector("#pop-up");
+function hidePopUp() {
+    popUp.style.visibility = "hidden";
+}
+
+hidePopUp();
+
+//Create a function to show pop up after first and second round
+function showPopUp() {
+    popUp.style.visibility = "visible";
+    pauseMusic();
+}
+
+//Create a function to blur
+function blur(){
+    quizContainer.style.filter = "blur(3px)";
+    footer.style.filter = "blur(3px)";
+}
+
+//Create a function to unblur
+function unBlur(){
+    quizContainer.style.filter = "none";
+    footer.style.filter = "none";
+    //music plays when quiz is unblurred and pop up is hidden
+    quizMusic();
+}
+
+//Add an event listener for the continue button 
+continueBtn.addEventListener("click", function(e) {
+    hidePopUp();
+    unBlur();
+})
+
+
+
 //Create function to display round titles
 function checkRound() {
     setTimeout(() => {
@@ -353,16 +394,22 @@ function checkRound() {
     roundTitle.textContent = "Round One";
     console.log("Round One");
   } else if (questionNow == 6) {
+    showPopUp();
+    blur();
     roundTitle.textContent = "Round Two";
     roundTitle.style.color = "var(--dusk)";
     console.log("Round Two");
   } else if (questionNow == 12) {
+    showPopUp();
+    blur();
     roundTitle.textContent = "Round Three";
     roundTitle.style.color = "var(--orangesicle)";
     console.log("Round Three");
   }
 } , 1000);
 }
+
+
 
 // Add sound to right answers chosen
 function rightAnswer() {
@@ -392,4 +439,5 @@ exitGame.addEventListener("click", function (e) {
   startBtn.disabled = true;
   hideQuizPage();
   pauseMusic();
+  //Page needs to really reload here!
 });
