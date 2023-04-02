@@ -147,7 +147,6 @@ h1 {
 .player-stats {
     display: flex;
     flex-direction: column;
-    text-align: center;
     width: 250px;
     height: 450px;
     margin-left: 300px;
@@ -173,10 +172,11 @@ h1 {
     width: 130px;
 }
 
-.playername {
+.player-name {
     display: flex;
     color: var(--oasis);
     padding-bottom: 20px;
+    margin-top: 10px;
 }
 
 #player-points-earned::before {

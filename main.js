@@ -20,6 +20,9 @@ let videoBkground = document.querySelector(".vid-background");
 //Select name input field
 const inputName = document.getElementById("input-name");
 
+//Center input text & placeholder on start page
+inputName.style.textAlign = "center";
+
 //Test validation for name input field via Start Quiz button status
 inputName.addEventListener("input", function (e) {
   //matching letters for a first name with or without hyphen & no space
@@ -46,12 +49,13 @@ startBtn.addEventListener("click", function (e) {
 /*-------------------------Quiz Page-------------------------*///Get input (user's name) and display on quiz game page
 startBtn.addEventListener("click", function (e) {
   if (inputName.value !== " ") {
-    let name = document.querySelector(".playername");
+    let name = document.querySelector(".player-name");
     name.textContent = "Player: " + inputName.value;
   }
   generateQuestions();
   quizMusic();
 });
+
 
 // Questions & answers
 //Store questions and answers; and validate answers
@@ -281,6 +285,7 @@ function generateQuestions() {
 
 generateQuestions();
 
+
 //Create function to validate answers
 optionA.addEventListener("click", function (e) {
   //if user clicks the first option and it is correct, show green border
@@ -431,6 +436,11 @@ function hideQuizPage() {
   quizContainer.style.visibility = "hidden";
 }
 
+//Create a function to reset page
+function resetPage(){
+    window.location.reload();
+};
+
 //Event listener that leaves the quiz page and goes to the start page
 exitGame.addEventListener("click", function (e) {
   startContainer.style.visibility = "visible";
@@ -440,4 +450,5 @@ exitGame.addEventListener("click", function (e) {
   hideQuizPage();
   pauseMusic();
   //Page needs to really reload here!
+  resetPage();
 });
