@@ -32,7 +32,7 @@
   <li><a href="https://stock.adobe.com/">Adobe Stock</a></li>
   <li><a href="https://giphy.com/">GIPHY</a></li>
   <li><a href="https://coolors.co/">Coolors</a></li>
-  <li><a href=" https://www.youtube.com/">YouTube</a></li>
+  <li><a href="https://www.youtube.com/">YouTube</a></li>
   <li><a href="https://www.adobe.com/products/premiere/free-trial-download.html">Adobe Premiere Pro</a></li>
   <li><a href="https://www.adobe.com/products/photoshop.html">Adobe Photoshop</a></li>
   <li><a href="https://www.flaticon.com/">Flaticon</a></li>
@@ -46,3 +46,7 @@
 
 <h3>Planning Process</h3>
 <p>Google docs was used to make note of the game's logic, objects and features. Then, prototypes of the game's pages were designed via Figma. The game's colors were sourced on Coolors; and since some design ideas were purely imaginative,i.e they could not be sourced online, I utilized Adobe PhotoShop and Premiere pro to bring my vision to fruition.</p>
+
+<h3>Challenges</h3>
+
+<!-- + Unsolved Problems? + -->
