@@ -27,6 +27,7 @@
  <ul>
   <li>Scripting/Programming languages: HTML, CSS, JavaScript</li>
   <li><a href="https://www.rd.com/article/movie-trivia-facts/">Reader’s Digest</a></li>
+  <li><a href="https://www.figma.com/">Figma</a></li>
   <li><a href="https://stock.adobe.com/">Adobe Stock</a></li>
   <li><a href="https://giphy.com/">GIPHY</a></li>
   <li><a href="https://coolors.co/">Coolors</a></li>
@@ -38,7 +39,5 @@
   <li><a href="https://prettier.io/">Prettier js</a></li>
   <li><a href="https://www.vhv.rs/">Vhv.rs</a></li>
   <li><a href="https://www.kapwing.com/ ">Kapwing</a></li>
-  <li><a href="https://www.pngwing.com/">PNGWING</a></li>
-  <li><a href=""> </a></li>
-  
+  <li><a href="https://www.pngwing.com/">PNGWING</a></li>  
  </ul>
