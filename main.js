@@ -266,13 +266,11 @@ resultsPage.style.display = "none";
 
 
 function showResults() {
-  setTimeout(() => {
     hidePopUp();
     hideQuizPage();
     unBlur();
     resultsPage.style.display = "block";
     finalPoints();
-  }, 1000); //this timer is for the LAST question so users can see points earned before final percentage score
 }
 
 /*-------------------------Results Page Part 2-------------------------*/
