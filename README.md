@@ -47,6 +47,8 @@
 <h3>Planning Process</h3>
 <p>Google docs was used to make note of the game's logic, objects and features. Then, prototypes of the game's pages were designed via Figma. The game's colors were sourced on Coolors; and since some design ideas were purely imaginative,i.e they could not be sourced online, I utilized Adobe PhotoShop and Premiere pro to bring my vision to fruition.</p>
 
+<b>Wireframe</b>
+
 <h3>Challenges</h3>
 
 <!-- + Unsolved Problems? + -->
