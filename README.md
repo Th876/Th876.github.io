@@ -23,3 +23,22 @@
    </ul>
  
  <p>The 'Exit Game' button allows users to leave the game, and return to the start page without receiving a result. </p>
+ <hr></hr>
+ <h2>Technologies used: </h2>
+ <ul>
+  <li>Scripting/Programming languages: HTML, CSS, JavaScript</li>
+  <li><a href="https://stock.adobe.com/">Adobe Stock</a></li>
+  <li><a href="https://coolors.co/">Coolors</a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  <li><a href=""> </a></li>
+  
+ </ul>
