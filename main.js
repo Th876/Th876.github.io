@@ -264,13 +264,12 @@ let points = 0; //user points earned
 let resultsPage = document.querySelector("#results-page");
 resultsPage.style.display = "none";
 
-
 function showResults() {
-    hidePopUp();
-    hideQuizPage();
-    unBlur();
-    resultsPage.style.display = "block";
-    finalPoints();
+  hidePopUp();
+  hideQuizPage();
+  unBlur();
+  resultsPage.style.display = "block";
+  finalPoints();
 }
 
 /*-------------------------Results Page Part 2-------------------------*/
@@ -291,12 +290,23 @@ winGif.classList.add("win-gif");
 resultsPage.appendChild(winGif);
 winGif.style.visibility = "hidden";
 
+//Refresh sticker
+let refresh = document.createElement("img");
+refresh.src = "/Th876.github.io/images/refresh-btn-clear.png";
+refresh.classList.add("refresh");
+resultsPage.appendChild(refresh);
+refresh.style.visibility = "hidden";
 
 //Calculate points in percentage and display if user wins or loses.
 function finalPoints() {
+    refresh.style.visibility = "visible";
+    refresh.addEventListener("click", function(e) {
+        resetPage();
+    });
   if (questionNow == 6 && points >= 5) {
     newPoints = Math.round((points / 6) * 100);
-    winMsg.textContent = "The Award Goes to You! Your Score: " + newPoints + "%";
+    winMsg.textContent =
+      "The Award Goes to You! Your Score: " + newPoints + "%";
     winGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(winMsg);
@@ -304,7 +314,8 @@ function finalPoints() {
   
   else if (questionNow == 6 && points < 5) {
     newPoints = Math.round((points / 6) * 100);
-    loseMsg.textContent = "Better Luck Next Year. Your Score: " + newPoints + "%";
+    loseMsg.textContent =
+      "Better Luck Next Year. Your Score: " + newPoints + "%";
     loseGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(loseMsg);
@@ -312,7 +323,8 @@ function finalPoints() {
   
   else if (questionNow == 12 && points >= 10) {
     newPoints = Math.round((points / 12) * 100);
-    winMsg.textContent = "The Award Goes to You! Your Score: " + newPoints + "%";
+    winMsg.textContent =
+      "The Award Goes to You! Your Score: " + newPoints + "%";
     winGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(winMsg);
@@ -320,7 +332,8 @@ function finalPoints() {
   
   else if (questionNow == 12 && points < 10) {
     newPoints = Math.round((points / 12) * 100);
-    loseMsg.textContent = "Better Luck Next Year. Your Score: " + newPoints + "%";
+    loseMsg.textContent =
+      "Better Luck Next Year. Your Score: " + newPoints + "%";
     loseGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(loseMsg);
@@ -328,7 +341,8 @@ function finalPoints() {
   
   else if (questionNow == 18 && points >= 15) {
     newPoints = Math.round((points / 18) * 100);
-    winMsg.textContent = "The Award Goes to You! Your Score: " + newPoints + "%";
+    winMsg.textContent =
+      "The Award Goes to You! Your Score: " + newPoints + "%";
     winGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(winMsg);
@@ -336,14 +350,15 @@ function finalPoints() {
   
   else if (questionNow == 18 && points < 15) {
     newPoints = Math.round((points / 18) * 100);
-    loseMsg.textContent = "Better Luck Next Year. Your Score: " + 
-    newPoints + "%";
+    loseMsg.textContent =
+      "Better Luck Next Year. Your Score: " + newPoints + "%";
     loseGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(loseMsg);
   }
-//To prevent promise error use setTimeout on pauseMusic()
-  setTimeout(function() {
+
+  //To prevent promise error use setTimeout on pauseMusic()
+  setTimeout(function () {
     pauseMusic();
   }, 150);
 }
@@ -357,7 +372,7 @@ function generateQuestions() {
   //If user reaches the last question, they're directed to the results page
   if (questionNow == 18) {
     showResults();
-};
+  }
 
   //Generate each question in the array at this position on the page and set its text content
   quizQuestions.textContent = quiz[questionNow].question;
@@ -406,8 +421,6 @@ optionA.addEventListener("click", function (e) {
       generateQuestions();
     }, 1000);
   }
-  //Maybe add color here
-  //setTimeout(() => {
 });
 
 //Validate second answer options
@@ -533,7 +546,6 @@ function hideQuizPage() {
   quizContainer.style.display = "none"; //this allows the quiz page to not show on the results page
 }
 
-// hideQuizPage();
 
 //Reset page
 function resetPage() {

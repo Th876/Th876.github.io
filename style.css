@@ -1,5 +1,5 @@
 /*--------------------- Start Page--------------------- */
-/* Add fonts here */
+/* Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rubik:wght@300;500&display=swap');
 
 /* Custom colors */
@@ -29,7 +29,7 @@
 --footerBkdrop: linear-gradient(147deg, var(--black) 0%, var(--coal) 74%);
 }
 
-/* style body */
+/* Style body */
 body {
     color:  var(--black);
     font-size: 1.5rem;
@@ -41,7 +41,7 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-/* Make video fit entire screen */
+/*Background video for start page*/
 .vid-background {
     position: absolute;
     right: 0;
@@ -67,7 +67,7 @@ h1 {
     text-align: center;
 }
 
-/* Style Start Quiz button */
+/* Style start quiz button */
 .startBtn {
  background-color: var(--green);   
  height: 50px;
@@ -260,7 +260,7 @@ h1 {
     text-align: center;
 }
 
-/* center and style pop up box */
+/* Center and style pop up box */
 .pop-up-box {
     background-image: url(/Th876.github.io/images/pop-up-clapper.png);
     background-repeat: no-repeat;
@@ -316,7 +316,7 @@ h1 {
     margin-left: 10px;
    }
 
-/* Style End Quiz buttons */
+/* Style end quiz buttons */
 .exit-game-btn {
     background-color: var(--crimson);
     height: 50px;
@@ -350,7 +350,7 @@ h1 {
 
    /* Style win message */
 .win-msg {
-    margin-top: 200px;
+    margin-top: 170px;
     color: var(--black);
     font-size: 4rem;
     text-align: center;
@@ -365,7 +365,6 @@ h1 {
 }
 
 /* Style gifs */
-
 .lose-gif {
     width: 200px;
     position: absolute;
@@ -380,6 +379,16 @@ h1 {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Refresh button */
+.refresh {
+    width: 105px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
  /*--------------------- Footer--------------------- */
