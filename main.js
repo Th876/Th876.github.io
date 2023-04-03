@@ -10,10 +10,6 @@ let startContainer = document.querySelector("#start-container");
 //Select footer
 let footer = document.querySelector("footer");
 
-//Hide quiz page
-let quizContainer = document.querySelector("#quiz-container");
-quizContainer.style.visibility = "hidden";
-
 //Select background video
 let videoBkground = document.querySelector(".vid-background");
 
@@ -37,7 +33,6 @@ inputName.addEventListener("input", function (e) {
   }
 });
 
-
 //Display Quiz page when Start game button is clicked
 startBtn.addEventListener("click", function (e) {
   startContainer.style.visibility = "hidden";
@@ -46,7 +41,8 @@ startBtn.addEventListener("click", function (e) {
   hidePopUp();
 });
 
-/*-------------------------Quiz Page-------------------------*///Get input (user's name) and display on quiz game page
+/*-------------------------Quiz Questions and Answers-------------------------*/
+//Get input (user's name) and display on quiz game page
 startBtn.addEventListener("click", function (e) {
   if (inputName.value !== " ") {
     let name = document.querySelector(".player-name");
@@ -56,9 +52,7 @@ startBtn.addEventListener("click", function (e) {
   quizMusic();
 });
 
-
-// Questions & answers
-//Store questions and answers; and validate answers
+// Questions, Answer Options and validated answers
 let quiz = [
   // Round One starts
   {
@@ -95,7 +89,7 @@ let quiz = [
 
   {
     question:
-      "What is the name of the camp where counselors are terrorized by a slasher in Friday the 13th?",
+      "What is the name of the camp where counelosrs are terrorized by a slasher in Friday the 13th?",
 
     optionA: "Camp Holland Lake",
     optionB: "Camp Crystal Lake",
@@ -217,34 +211,33 @@ let quiz = [
   //
 ];
 
-//Set background music variable
+//background music variable
 let backgroundMusic = new Audio();
 
-//Create play background music function
+//Play background music function
 function quizMusic() {
   backgroundMusic.src = "/Th876.github.io/audio/gameBackgroundSound.mp3";
   backgroundMusic.play();
   backgroundMusic.loop = true;
-  backgroundMusic.controls = true;
-};
+}
 
-//Create stop background music function
-function pauseMusic() { 
-    backgroundMusic.pause();
-    backgroundMusic.currentTime = 0;
-};
+//Stop background music function
+function pauseMusic() {
+  backgroundMusic.pause();
+  backgroundMusic.currentTime = 0;
+}
 
-//Generates round titles
+//Generate round titles when start button is clicked
 startBtn.addEventListener("click", function (e) {
   if (questionNow <= 7) {
     roundTitle.textContent = "Round One";
-    console.log("Round One");
+    // console.log("Round One");
   } else if (questionNow <= 14) {
     roundTitle.textContent = "Round Two";
-    console.log("Round Two");
+    // console.log("Round Two");
   } else {
     roundTitle.textContent = "Round Three";
-    console.log("Round Three");
+    // console.log("Round Three");
   }
 });
 
@@ -255,23 +248,89 @@ quesContainer.appendChild(quizQuestions);
 const optionA = document.querySelector("#option-a");
 const optionB = document.querySelector("#option-b");
 let userPoints = document.querySelector("#user-points");
-let playerPointsEarned = document.querySelector("#player-points-earned"); 
+let playerPointsEarned = document.querySelector("#player-points-earned");
 let totalPoints = document.querySelector("#total-points");
 let roundTitle = document.querySelector(".round-title");
 const exitGame = document.querySelector(".exit-game-btn");
 const quizBtn = document.querySelector(".quiz-btn");
 const continueBtn = document.querySelector(".continue-btn");
 
-
 //Set counter for question and points
 const lastQuestion = quiz.length - 1;
 let questionNow = 0; //current question
 let points = 0; //user points earned
 
-//Create function to generate questions and answers
+/*-------------------------Results Page Part 1-------------------------*/
+let resultsPage = document.querySelector("#results-page");
+resultsPage.style.visibility = "hidden";
+
+function showResults() {
+  setTimeout(() => {
+    hidePopUp();
+    pauseMusic();
+    hideQuizPage();
+    unBlur();
+    resultsPage.style.visibility = "visible";
+    finalPoints();
+  }, 1000); //this timer is for the LAST question so users can see points earned before final percentage score
+}
+
+/*-------------------------Results Page Part 2-------------------------*/
+let loseMsg = document.querySelector(".lose-msg");
+let winMsg = document.querySelector(".win-msg");
+let newPoints;
+
+//Calculate points in percentage and display if user wins or loses.
+function finalPoints() {
+  if (questionNow == 6 && points >= 5) {
+    newPoints = Math.round((points / 6) * 100);
+    winMsg.textContent = "You Won with " + newPoints + "%";
+    winMsg.style.color = "var(--green)";
+    //Append points to results page
+    resultsPage.appendChild(winMsg);
+  } else if (questionNow == 6 && points < 5) {
+    newPoints = Math.round((points / 6) * 100);
+    loseMsg.textContent = "You Lose with " + newPoints + "%";
+    loseMsg.style.color = "var(--red)";
+    //Append points to results page
+    resultsPage.appendChild(loseMsg);
+  } else if (questionNow == 12 && points >= 10) {
+    newPoints = Math.round((points / 12) * 100);
+    winMsg.textContent = "You Won! with " + newPoints + "%";
+    winMsg.style.color = "var(--green)";
+    //Append points to results page
+    resultsPage.appendChild(winMsg);
+  } else if (questionNow == 12 && points < 10) {
+    newPoints = Math.round((points / 12) * 100);
+    loseMsg.textContent = "You Lose with " + newPoints + "%";
+    loseMsg.style.color = "var(--red)";
+    //Append points to results page
+    resultsPage.appendChild(loseMsg);
+  } else if (questionNow == 18 && points >= 15) {
+    newPoints = Math.round((points / 18) * 100);
+    winMsg.textContent = "You Won! with " + newPoints + "%";
+    winMsg.style.color = "var(--green)";
+    //Append points to results page
+    resultsPage.appendChild(winMsg);
+  } else if (questionNow == 18 && points < 15) {
+    newPoints = Math.round((points / 18) * 100);
+    loseMsg.textContent = "You Lose with " + newPoints + "%";
+    loseMsg.style.color = "var(--red)";
+    //Append points to results page
+    resultsPage.appendChild(loseMsg);
+  }
+}
+
+/*-------------------------Quiz Page-------------------------*/
+//Generate questions and answers
 function generateQuestions() {
   //Updates points received out of the questions that exist
   totalPoints.textContent = quiz.length;
+
+  //If user reaches the last question, they're directed to the results page
+  if (questionNow == 18) {
+    showResults();
+  }
 
   //Generate each question in the array at this position on the page and set its text content
   quizQuestions.textContent = quiz[questionNow].question;
@@ -285,8 +344,7 @@ function generateQuestions() {
 
 generateQuestions();
 
-
-//Create function to validate answers
+//Validate first answer options
 optionA.addEventListener("click", function (e) {
   //if user clicks the first option and it is correct, show green border
   if (quiz[questionNow].answer === "option-a") {
@@ -323,6 +381,7 @@ optionA.addEventListener("click", function (e) {
   }
 });
 
+//Validate second answer options
 optionB.addEventListener("click", function (e) {
   //if user clicks the first option and it is correct, show green border
   if (quiz[questionNow].answer === "option-b") {
@@ -333,6 +392,7 @@ optionB.addEventListener("click", function (e) {
     optionB.style.color = "var(--white)";
     rightAnswer();
   }
+
   //if user clicks the first option and it is correct, show red border
   else {
     optionB.style.backgroundColor = "var(--red)";
@@ -358,90 +418,100 @@ optionB.addEventListener("click", function (e) {
 /*-------------------------Pop Up Box Features-------------------------*/
 //Hide pop up box at the start of the game
 let popUp = document.querySelector("#pop-up");
-function hidePopUp() {
-    popUp.style.visibility = "hidden";
-}
 
+function hidePopUp() {
+  popUp.style.visibility = "hidden";
+  optionA.disabled = false;
+  optionA.style.cursor = "pointer";
+  optionB.disabled = false;
+  optionB.style.cursor = "pointer";
+  exitGame.disabled = false;
+  exitGame.style.cursor = "pointer";
+}
 hidePopUp();
 
-//Create a function to show pop up after first and second round
+//Show pop up after first and second round. Disable quiz answer option buttons and exit game button
 function showPopUp() {
-    popUp.style.visibility = "visible";
-    pauseMusic();
+  popUp.style.visibility = "visible";
+  pauseMusic();
+  optionA.disabled = true;
+  optionA.style.cursor = "not-allowed";
+  optionB.disabled = true;
+  optionB.style.cursor = "not-allowed";
+  exitGame.disabled = true;
+  exitGame.style.cursor = "not-allowed";
 }
 
-//Create a function to blur
-function blur(){
-    quizContainer.style.filter = "blur(3px)";
-    footer.style.filter = "blur(3px)";
+//Blur page
+function blur() {
+  quizContainer.style.filter = "blur(3px)";
+  footer.style.filter = "blur(3px)";
 }
 
-//Create a function to unblur
-function unBlur(){
-    quizContainer.style.filter = "none";
-    footer.style.filter = "none";
-    //music plays when quiz is unblurred and pop up is hidden
-    quizMusic();
+//Unblur page
+function unBlur() {
+  quizContainer.style.filter = "none";
+  footer.style.filter = "none";
+  //music plays when quiz is unblurred and pop up is hidden
+  quizMusic();
 }
 
-//Add an event listener for the continue button 
-continueBtn.addEventListener("click", function(e) {
-    hidePopUp();
-    unBlur();
-})
+//Continue button event listener that resumes quiz
+continueBtn.addEventListener("click", function (e) {
+  hidePopUp();
+  unBlur();
+});
 
-
-
-//Create function to display round titles
+//Timely insert pop up after rounds one and two; and apply different colors to each round
 function checkRound() {
-    setTimeout(() => {
-  if (questionNow == 0) {
-    roundTitle.textContent = "Round One";
-    console.log("Round One");
-  } else if (questionNow == 6) {
-    showPopUp();
-    blur();
-    roundTitle.textContent = "Round Two";
-    roundTitle.style.color = "var(--dusk)";
-    console.log("Round Two");
-  } else if (questionNow == 12) {
-    showPopUp();
-    blur();
-    roundTitle.textContent = "Round Three";
-    roundTitle.style.color = "var(--orangesicle)";
-    console.log("Round Three");
-  }
-} , 1000);
+  setTimeout(() => {
+    if (questionNow == 0) {
+      roundTitle.textContent = "Round One";
+      // console.log("Round One");
+    } else if (questionNow == 6) {
+      showPopUp();
+      blur();
+      roundTitle.textContent = "Round Two";
+      roundTitle.style.color = "var(--dusk)";
+      // console.log("Round Two");
+    } else if (questionNow == 12) {
+      showPopUp();
+      blur();
+      roundTitle.textContent = "Round Three";
+      roundTitle.style.color = "var(--orangesicle)";
+      // console.log("Round Three");
+    }
+  }, 1000);
 }
 
-
-
-// Add sound to right answers chosen
+//Button sound for right answers chosen
 function rightAnswer() {
   let right = new Audio();
   right.src = "/Th876.github.io/audio/correct-point.mp3";
   right.play();
 }
 
-// Add sound to wrong answers chosen
+//Button sound for wrong answers chosen
 function wrongAnswer() {
   let wrong = new Audio();
   wrong.src = "/Th876.github.io/audio/wrong-point.mp3";
   wrong.play();
 }
 
-
-//Create a function to show quiz page
+//Hide quiz page
+let quizContainer = document.querySelector("#quiz-container");
 function hideQuizPage() {
   quizContainer.style.visibility = "hidden";
 }
 
-//Create a function to reset page
-function resetPage(){
-    window.location.reload();
-};
+hideQuizPage();
 
-//Event listener that leaves the quiz page and goes to the start page
+//Reset page
+function resetPage() {
+  window.location.reload();
+}
+
+//Exit game button event listener that leaves the quiz page and goes to the start page
 exitGame.addEventListener("click", function (e) {
   startContainer.style.visibility = "visible";
   videoBkground.style.visibility = "visible";
@@ -449,6 +519,12 @@ exitGame.addEventListener("click", function (e) {
   startBtn.disabled = true;
   hideQuizPage();
   pauseMusic();
-  //Page needs to really reload here!
   resetPage();
+});
+
+let endGameBtn = document.querySelector(".endgame-btn");
+
+//End game button. Users are directed to results page when endGame button is clicked. End Game button is provided after round one and round two.
+endGameBtn.addEventListener("click", function (e) {
+  showResults();
 });

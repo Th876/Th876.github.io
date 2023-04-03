@@ -1,3 +1,4 @@
+/*--------------------- Start Page--------------------- */
 /* Add fonts here */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rubik:wght@300;500&display=swap');
 
@@ -343,6 +344,13 @@ h1 {
     border-radius: 10px;
     border: none;
     box-shadow: 0px 5px 10px 0px var(--clearBlack);
+   }
+
+
+  /*--------------------- Results Page--------------------- */
+
+   #results-page {
+    background-color: var(--coffee);
    }
 
    /*Style footer*/
