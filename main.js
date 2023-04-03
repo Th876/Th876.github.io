@@ -280,36 +280,67 @@ let loseMsg = document.querySelector(".lose-msg");
 let winMsg = document.querySelector(".win-msg");
 let newPoints;
 
+// Create gifs for results page
+let loseGif = document.createElement("img");
+loseGif.src = "/Th876.github.io/images/crying-emoji.gif";
+loseGif.classList.add("lose-gif");
+resultsPage.appendChild(loseGif);
+loseGif.style.visibility = "hidden";
+
+let winGif = document.createElement("img");
+winGif.src = "/Th876.github.io/images/oscars-result.gif";
+winGif.classList.add("win-gif");
+resultsPage.appendChild(winGif);
+winGif.style.visibility = "hidden";
+
+
 //Calculate points in percentage and display if user wins or loses.
 function finalPoints() {
   if (questionNow == 6 && points >= 5) {
     newPoints = Math.round((points / 6) * 100);
-    winMsg.textContent = "You Won with " + newPoints + "%";
+    winMsg.textContent = "The Award Goes to You! Your Score: " + newPoints + "%";
+    winGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(winMsg);
-  } else if (questionNow == 6 && points < 5) {
+  } 
+  
+  else if (questionNow == 6 && points < 5) {
     newPoints = Math.round((points / 6) * 100);
-    loseMsg.textContent = "You Lose with " + newPoints + "%";
+    loseMsg.textContent = "Better Luck Next Year. Your Score: " + newPoints + "%";
+    loseGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(loseMsg);
-  } else if (questionNow == 12 && points >= 10) {
+  } 
+  
+  else if (questionNow == 12 && points >= 10) {
     newPoints = Math.round((points / 12) * 100);
-    winMsg.textContent = "You Won! with " + newPoints + "%";
+    winMsg.textContent = "The Award Goes to You! Your Score: " + newPoints + "%";
+    winGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(winMsg);
-  } else if (questionNow == 12 && points < 10) {
+  } 
+  
+  else if (questionNow == 12 && points < 10) {
     newPoints = Math.round((points / 12) * 100);
-    loseMsg.textContent = "You Lose with " + newPoints + "%";
+    loseMsg.textContent = "Better Luck Next Year. Your Score: " + newPoints + "%";
+    loseGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(loseMsg);
-  } else if (questionNow == 18 && points >= 15) {
+  } 
+  
+  else if (questionNow == 18 && points >= 15) {
     newPoints = Math.round((points / 18) * 100);
-    winMsg.textContent = "You Won! with " + newPoints + "%";
+    winMsg.textContent = "The Award Goes to You! Your Score: " + newPoints + "%";
+    winGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(winMsg);
-  } else if (questionNow == 18 && points < 15) {
+  } 
+  
+  else if (questionNow == 18 && points < 15) {
     newPoints = Math.round((points / 18) * 100);
-    loseMsg.textContent = "You Lose with " + newPoints + "%";
+    loseMsg.textContent = "Better Luck Next Year. Your Score: " + 
+    newPoints + "%";
+    loseGif.style.visibility = "visible";
     //Append points to results page
     resultsPage.appendChild(loseMsg);
   }
@@ -328,7 +359,7 @@ function generateQuestions() {
   //If user reaches the last question, they're directed to the results page
   if (questionNow == 18) {
     showResults();
-  }
+};
 
   //Generate each question in the array at this position on the page and set its text content
   quizQuestions.textContent = quiz[questionNow].question;
@@ -377,6 +408,8 @@ optionA.addEventListener("click", function (e) {
       generateQuestions();
     }, 1000);
   }
+  //Maybe add color here
+  //setTimeout(() => {
 });
 
 //Validate second answer options

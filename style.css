@@ -336,7 +336,11 @@ h1 {
   /*--------------------- Results Page--------------------- */
 
    #results-page {
-    background-color: var(--coffee);
+    background-image: url(/Th876.github.io/images/red-carpet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -346,17 +350,36 @@ h1 {
 
    /* Style win message */
 .win-msg {
-    margin: 0 auto;
-    color: var(--green);
-    font-size: 2rem;
+    margin-top: 200px;
+    color: var(--black);
+    font-size: 4rem;
     text-align: center;
 }
 
 /* Style lose message */
 .lose-msg {
-    color: var(--red);
-    font-size: 2rem;
+    margin-top: -60px;
+    color: var(--black);
+    font-size: 4rem;
     text-align: center;
+}
+
+/* Style gifs */
+
+.lose-gif {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.win-gif {
+    width: 155px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
  /*--------------------- Footer--------------------- */
