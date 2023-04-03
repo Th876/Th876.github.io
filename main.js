@@ -262,15 +262,15 @@ let points = 0; //user points earned
 
 /*-------------------------Results Page Part 1-------------------------*/
 let resultsPage = document.querySelector("#results-page");
-resultsPage.style.visibility = "hidden";
+resultsPage.style.display = "none";
+
 
 function showResults() {
   setTimeout(() => {
     hidePopUp();
-    pauseMusic();
     hideQuizPage();
     unBlur();
-    resultsPage.style.visibility = "visible";
+    resultsPage.style.display = "block";
     finalPoints();
   }, 1000); //this timer is for the LAST question so users can see points earned before final percentage score
 }
@@ -285,40 +285,38 @@ function finalPoints() {
   if (questionNow == 6 && points >= 5) {
     newPoints = Math.round((points / 6) * 100);
     winMsg.textContent = "You Won with " + newPoints + "%";
-    winMsg.style.color = "var(--green)";
     //Append points to results page
     resultsPage.appendChild(winMsg);
   } else if (questionNow == 6 && points < 5) {
     newPoints = Math.round((points / 6) * 100);
     loseMsg.textContent = "You Lose with " + newPoints + "%";
-    loseMsg.style.color = "var(--red)";
     //Append points to results page
     resultsPage.appendChild(loseMsg);
   } else if (questionNow == 12 && points >= 10) {
     newPoints = Math.round((points / 12) * 100);
     winMsg.textContent = "You Won! with " + newPoints + "%";
-    winMsg.style.color = "var(--green)";
     //Append points to results page
     resultsPage.appendChild(winMsg);
   } else if (questionNow == 12 && points < 10) {
     newPoints = Math.round((points / 12) * 100);
     loseMsg.textContent = "You Lose with " + newPoints + "%";
-    loseMsg.style.color = "var(--red)";
     //Append points to results page
     resultsPage.appendChild(loseMsg);
   } else if (questionNow == 18 && points >= 15) {
     newPoints = Math.round((points / 18) * 100);
     winMsg.textContent = "You Won! with " + newPoints + "%";
-    winMsg.style.color = "var(--green)";
     //Append points to results page
     resultsPage.appendChild(winMsg);
   } else if (questionNow == 18 && points < 15) {
     newPoints = Math.round((points / 18) * 100);
     loseMsg.textContent = "You Lose with " + newPoints + "%";
-    loseMsg.style.color = "var(--red)";
     //Append points to results page
     resultsPage.appendChild(loseMsg);
   }
+//To prevent promise error use setTimeout on pauseMusic()
+  setTimeout(function() {
+    pauseMusic();
+  }, 150);
 }
 
 /*-------------------------Quiz Page-------------------------*/
@@ -501,10 +499,10 @@ function wrongAnswer() {
 //Hide quiz page
 let quizContainer = document.querySelector("#quiz-container");
 function hideQuizPage() {
-  quizContainer.style.visibility = "hidden";
+  quizContainer.style.display = "none"; //this allows the quiz page to not show on the results page
 }
 
-hideQuizPage();
+// hideQuizPage();
 
 //Reset page
 function resetPage() {
