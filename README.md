@@ -23,7 +23,7 @@
  
  <p>The 'Exit Game' button allows users to leave the game, and return to the start page without receiving a result. </p>
  <hr></hr>
- <h3>Technologies used: </h3>
+ <h3>Technologies used:</h3>
  <ul>
   <li>Scripting/Programming languages: HTML, CSS, JavaScript</li>
   <li><a href="https://www.rd.com/article/movie-trivia-facts/">Reader’s Digest</a></li>
@@ -47,7 +47,8 @@
 <h3>Planning Process</h3>
 <p>Google docs was used to make note of the game's logic, objects and features. Then, prototypes of the game's pages were designed via Figma. The game's colors were sourced on Coolors; and since some design ideas were purely imaginative,i.e they could not be sourced online, I utilized Adobe PhotoShop and Premiere pro to bring my vision to fruition.</p>
 
-<b>Wireframe</b>
+<h3>Wireframe</h3>
+<img src="/Wireframe-ReadMe.png">
 
 <h3>Challenges</h3>
 
