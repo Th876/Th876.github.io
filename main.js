@@ -85,7 +85,7 @@ startBtn.addEventListener("click", function (e) {
   quizMusic();
 });
 
-// Questions, Answer Options and validated answers
+// Questions, Answer Options and Validated Answers
 let quiz = [
   // Round One starts
   {
@@ -241,7 +241,7 @@ let quiz = [
     optionB: "Vietnam",
     answer: "option-a",
   },
-  //
+
 ];
 
 //background music variable
@@ -293,7 +293,7 @@ const lastQuestion = quiz.length - 1;
 let questionNow = 0; //current question
 let points = 0; //user points earned
 
-/*-------------------------Results Page Part 1-------------------------*/
+/*-------------------------Results Page-------------------------*/
 let resultsPage = document.querySelector("#results-page");
 resultsPage.style.display = "none";
 
@@ -305,7 +305,7 @@ function showResults() {
   finalPoints();
 }
 
-/*-------------------------Results Page Part 2-------------------------*/
+
 let loseMsg = document.querySelector(".lose-msg");
 let winMsg = document.querySelector(".win-msg");
 let newPoints;
@@ -421,7 +421,7 @@ generateQuestions();
 
 //Validate first answer options
 optionA.addEventListener("click", function (e) {
-  //if user clicks the first option and it is correct, show green border
+  //if user clicks the first option and it is correct, show green background
   if (quiz[questionNow].answer === "option-a") {
     //increment points
     points++;
@@ -434,7 +434,7 @@ optionA.addEventListener("click", function (e) {
     optionA.style.color = "var(--white)";
     rightAnswer();
   }
-  //if user clicks the first option and it is correct, show red border
+  //if user clicks the first option and it is correct, show red background
   else {
     optionA.style.backgroundColor = "var(--red)";
     optionA.style.color = "var(--white)";
@@ -447,7 +447,7 @@ optionA.addEventListener("click", function (e) {
 
     checkRound();
 
-    //Delay next set of questions & answers; reset border to black
+    //Delay next set of questions & answers; reset background to clear
     setTimeout(() => {
       optionA.style.backgroundColor = "transparent";
       optionA.style.color = "var(--black)";
@@ -458,7 +458,7 @@ optionA.addEventListener("click", function (e) {
 
 //Validate second answer options
 optionB.addEventListener("click", function (e) {
-  //if user clicks the first option and it is correct, show green border
+  //if user clicks the first option and it is correct, show green background
   if (quiz[questionNow].answer === "option-b") {
     //increment points
     points++;
@@ -468,7 +468,7 @@ optionB.addEventListener("click", function (e) {
     rightAnswer();
   }
 
-  //if user clicks the first option and it is correct, show red border
+  //if user clicks the first option and it is correct, show red background
   else {
     optionB.style.backgroundColor = "var(--red)";
     optionB.style.color = "var(--white)";
@@ -481,7 +481,7 @@ optionB.addEventListener("click", function (e) {
 
     checkRound();
 
-    //Delay next set of questions & answers; reset border to black
+    //Delay next set of questions & answers; reset background to transparent
     setTimeout(() => {
       optionB.style.backgroundColor = "transparent";
       optionB.style.color = "var(--black)";
