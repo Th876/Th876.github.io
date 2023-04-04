@@ -117,7 +117,7 @@ let quiz = [
 
     optionA: "Iron Man",
     optionB: "Captain America: The First Avenger",
-    answer: "option-b",
+    answer: "option-a",
   },
 
   {
