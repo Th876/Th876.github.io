@@ -53,6 +53,9 @@
 <h3>Wireframe</h3>
 <img src="/Wireframe-ReadMe.png">
 
+<h3>Installation</h3>
+<p>To install this project, go to my repository, click on the green, drop-down 'Code' button in the upper right corner and select 'Download ZIP'.  After extracting (unzipping) the file, open the folder into your source-code editor and use Live Server/Go Live to start playing the game.</p>
+
 <h3>Challenges</h3>
 
 <h4>Functionality Challenges</h4>
@@ -72,16 +75,10 @@ This issue singled-handedly caused other problems with the results' page. Once t
 </ul>
 
 <h3>Credits</h3>
-<!-- + Special thanks to my Instructor Tishana Trainor for assigning me this project to help foster a good understanding of HTML5, CSS3 and JavaScript; and my TAs Dylan Comeau and Kasper Kain for helping me understand / solve some issues I faced with the JavaScript section of my project. Many thanks also to my classmates Tamara **** and Anuja for taking the time out to assist me whenever I needed help.
+<p>Special thanks to my Instructor Tishana Trainor for assigning me this project to help foster a good understanding of HTML5, CSS3 and JavaScript; and my TAs Dylan Comeau and Kasper Kain for helping me understand / solve some issues I faced with the JavaScript section of my project. Many thanks also to my classmates <a href="https://github.com/tamara-703">Tamara Saadeh</a> and <a href="https://github.com/AnujaBujurge29">Anuja Bujurge</a> for taking the time out to assist me whenever I needed help.</p>
 
- Overall, this project has taught me a lot about effectively planning before implementing code as this saves time and will, in the future, save money. It is clear that every aspect of a website/web application needs to be thought of. For instance, my pop-up box allows the game's backdrop to be blurred. This visually alludes to the idea that the backdrop is disabled until the user exists the pop-up message. However, the appearance of a blurred backdrop is, in actuality, pointless if all elements linked to events are not disabled. Functionality is key. This project has, therefore, not only revealed my capabilities, but also my contraints and the areas I need to improve.
-+ -->
+<p>Overall, this project has taught me a lot about effectively planning before implementing code as this saves time and will, in the future, save money. It is clear that every aspect of a website/web application needs to be thought of. For instance, my pop-up box allows the game's backdrop to be blurred. This visually alludes to the idea that the backdrop is disabled until the user exists the pop-up message. However, the appearance of a blurred backdrop is, in actuality, pointless if all elements linked to events are not disabled. Functionality is key. This project has, therefore, not only revealed my capabilities, but also my contraints and the areas I need to improve.</p>
 
-
-<h3>License</h3>
-<!-- + A short snippet describing the license (MIT, Apache etc)
-
-MIT © Yourname + -->
 
 <!-- + Unsolved Problems? Error from console at the end of 'Round Three'. It reads, "Uncaught TypeError: Cannot read properties of undefined (reading 'question')
     at generateQuestions (main.js:412:49)
