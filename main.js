@@ -216,7 +216,7 @@ let backgroundMusic = new Audio();
 
 //Play background music function
 function quizMusic() {
-  backgroundMusic.src = "/Th876.github.io/audio/gameBackgroundSound.mp3";
+  backgroundMusic.src = "audio/gameBackgroundSound.mp3";
   backgroundMusic.play();
   backgroundMusic.loop = true;
 }
@@ -279,20 +279,20 @@ let newPoints;
 
 // Create gifs for results page
 let loseGif = document.createElement("img");
-loseGif.src = "/Th876.github.io/images/crying-emoji.gif";
+loseGif.src = "images/crying-emoji.gif";
 loseGif.classList.add("lose-gif");
 resultsPage.appendChild(loseGif);
 loseGif.style.visibility = "hidden";
 
 let winGif = document.createElement("img");
-winGif.src = "/Th876.github.io/images/oscars-result.gif";
+winGif.src = "images/oscars-result.gif";
 winGif.classList.add("win-gif");
 resultsPage.appendChild(winGif);
 winGif.style.visibility = "hidden";
 
 //Refresh sticker
 let refresh = document.createElement("img");
-refresh.src = "/Th876.github.io/images/refresh-btn-clear.png";
+refresh.src = "images/refresh-btn-clear.png";
 refresh.classList.add("refresh");
 resultsPage.appendChild(refresh);
 refresh.style.visibility = "hidden";
@@ -529,14 +529,14 @@ function checkRound() {
 //Button sound for right answers chosen
 function rightAnswer() {
   let right = new Audio();
-  right.src = "/Th876.github.io/audio/correct-point.mp3";
+  right.src = "audio/correct-point.mp3";
   right.play();
 }
 
 //Button sound for wrong answers chosen
 function wrongAnswer() {
   let wrong = new Audio();
-  wrong.src = "/Th876.github.io/audio/wrong-point.mp3";
+  wrong.src = "audio/wrong-point.mp3";
   wrong.play();
 }
 

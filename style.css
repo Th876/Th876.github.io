@@ -127,7 +127,7 @@ h1 {
 #quiz-container {
     height: 100vh;
     width: 100vw; 
-    background-image: url(/Th876.github.io/images/movietheater.jpeg);
+    background-image: url(images/movietheater.jpeg);
     background-size: cover;
 }
 
@@ -262,7 +262,7 @@ h1 {
 
 /* Center and style pop up box */
 .pop-up-box {
-    background-image: url(/Th876.github.io/images/pop-up-clapper.png);
+    background-image: url(images/pop-up-clapper.png);
     background-repeat: no-repeat;
     position: absolute;
     z-index: 1;
@@ -336,7 +336,7 @@ h1 {
   /*--------------------- Results Page--------------------- */
 
    #results-page {
-    background-image: url(/Th876.github.io/images/red-carpet.jpg);
+    background-image: url(images/red-carpet.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
