@@ -20,6 +20,8 @@
     <li> They've scored 15/18 (83%) or more for 'Round Three'.</li>
    </ul>
  
+ <p>And loses, if they fall below the pass mark</p>
+ 
  <p>The 'Exit Game' button allows users to leave the game, and return to the start page without receiving a result. </p>
  <hr></hr>
  <h3>Technologies used:</h3>
