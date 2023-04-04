@@ -11,7 +11,7 @@
 
 <p>Questions switch to the next as soon as the user selects an answer. Note: Users cannot return to the previous question and answer.</p>
 
-<p>At the end of 'Round One' and 'Round Two', the user is greeted with a pop-up message which requires decision-making——continue the game or end the game. If the user continues the game, The next round will begin and points from the previous round(s) will be transferred. However, if the user ends the game, the results page is displayed. All points the user accumulated before ending the game are calculated and displayed as a percentage. The results page also displays if the user has won or lost the game.</p>
+<p>At the end of 'Round One' and 'Round Two', the user is greeted with a pop-up message which requires decision-making—continue the game or end the game. If the user continues the game, The next round will begin and points from the previous round(s) will be transferred. However, if the user ends the game, the results page is displayed. All points the user accumulated before ending the game are calculated and displayed as a percentage. The results page also displays if the user has won or lost the game.</p>
 
 <p>When the pop-up message appears onscreen, the background is blurred, the background music stops and users cannot interact with the background unless they click the 'Continue' button. When the 'Continue' button is clicked, the music resumes and the background is unblurred.</p>
 
