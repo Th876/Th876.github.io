@@ -54,7 +54,21 @@
 <img src="/Wireframe-ReadMe.png">
 
 <h3>Installation</h3>
-<p>To install this project, go to my repository, click on the green, drop-down 'Code' button in the upper right corner and select 'Download ZIP'.  After extracting (unzipping) the file, open the folder into your source-code editor and use Live Server/Go Live to start playing the game.</p>
+<p>To install this project: 
+  <ol>
+    <li> Go to my repository, click on the green, drop-down 'Code' button in the upper right corner.</li> 
+    <li>Under the 'Local' tab, copy the URL provided under 'Clone'.</li> 
+    <li>Open Git Bash.</li> 
+    <li>Type the command 'git clone' and paste the URL beside it, e.g. git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY </li> 
+    <li>The repository is now cloned on your local computer.</li>
+</ol>
+
+<p> You can also follow step 1 of the instalation process, then: </p>
+<ol>
+  <li> Under the 'Local' tab, select 'Download ZIP'.</li>
+  <li>After extracting (unzipping) the file, open the folder into your source-code editor.</li> 
+  <li>Use Live Server/Go Live in your source code editor to start playing the game.</li>
+</ol>
 
 <h3>Challenges</h3>
 
