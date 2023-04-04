@@ -71,6 +71,10 @@
 <li></li>
 </ul>
 
+<h3>Credits</h3>
+
+<h3>License</h3>
+
 <!-- + Unsolved Problems? Error from console at the end of 'Round Three'. It reads, "Uncaught TypeError: Cannot read properties of undefined (reading 'question')
     at generateQuestions (main.js:412:49)
     at main.js:455:7". I am not sure how to fix this at the moment of writing this. + -->
