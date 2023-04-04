@@ -66,7 +66,7 @@
 
 <h4>Design Challenges</h4>
 <ul>
-<li></li>
+<li><b>Visibility vs Display:</b> Since I limited my files to one HTML, one CSS and one JS, I found that implementing the two properties would be the best way to approach this project. However, I had little understanding of what each property does, and, for this reason, it was quite difficult understanding why the results' page was showing at the top of the quiz container. I realized, after much research, that the results' page needed to have a property-value of "display:none"; so that it does not take up the space that my quiz container needs; while the quiz container needs a property-value of visibility = "visible"; so that it takes up all the space in the layout. Here is a great explanation of both <a href="https://www.tutorialrepublic.com/css-tutorial/css-visibility.php">visibility and display</a>.</li>
 <li></li>
 <li></li>
 </ul>
