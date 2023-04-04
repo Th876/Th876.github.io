@@ -20,10 +20,9 @@ const inputName = document.getElementById("input-name");
 inputName.style.textAlign = "center";
 
 //Test validation for name input field via Start Quiz button status
+//Match letters for a first name with or without hyphen & no space
 let regex = /^[a-zA-Z]+(-[a-zA-Z]+)?$/;
 inputName.addEventListener("input", function (e) {
-  //matching letters for a first name with or without hyphen & no space
-  // let regex = /^[a-zA-Z]+(-[a-zA-Z]+)?$/;
 
   // If name matches regex, button is enabled and user can start game
   if (inputName.value.match(regex)) {
