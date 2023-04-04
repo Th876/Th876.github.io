@@ -1,5 +1,5 @@
 ![Heading](./Heading-ReadMe.png)
-<p> The Best Movie Trivia Game is the first project I created at <a href="https://perscholas.org/courses/software-engineer/software-engineer-atlanta/">Per Scholas'</a> Software Engineer Training.</p> The game has three rounds and consists of 18 movie questions in total. Each question has two option answers. This is the <a href= "https://th876.github.io/triviagame/ ">website link</a> for my game project.
+<p> The Best Movie Trivia Game is the first project I created at <a href="https://perscholas.org/courses/software-engineer/software-engineer-atlanta/" target="_blank">Per Scholas'</a> Software Engineer Training.</p> The game has three rounds and consists of 18 movie questions in total. Each question has two option answers. This is the <a href= "https://th876.github.io/triviagame/" target="_blank">website link</a> for my game project.
 <hr></hr>
 <h3>Game Features</h3>
 <p>On the main page, the 'Start Game' button is disabled, which prompts the user to enter a name in order to play. As the user types a name, a warning message is displayed to ensure that an acceptable name format is given. This name is later displayed on the quiz page as, for example, 'Player: Anna'.</p>
@@ -26,22 +26,22 @@
  <h3>Technologies used:</h3>
  <ul>
   <li>Scripting/Programming languages: HTML, CSS, JavaScript</li>
-  <li><a href="https://www.rd.com/article/movie-trivia-facts/">Reader’s Digest</a></li>
-  <li><a href="https://www.figma.com/">Figma</a></li>
-  <li><a href="https://docs.google.com/">Google Docs</a></li>
-  <li><a href="https://stock.adobe.com/">Adobe Stock</a></li>
-  <li><a href="https://giphy.com/">GIPHY</a></li>
-  <li><a href="https://coolors.co/">Coolors</a></li>
-  <li><a href="https://www.youtube.com/">YouTube</a></li>
-  <li><a href="https://www.adobe.com/products/premiere/free-trial-download.html">Adobe Premiere Pro</a></li>
-  <li><a href="https://www.adobe.com/products/photoshop.html">Adobe Photoshop</a></li>
-  <li><a href="https://www.flaticon.com/">Flaticon</a></li>
+  <li><a href="https://www.rd.com/article/movie-trivia-facts/" target="_blank">Reader’s Digest</a></li>
+  <li><a href="https://www.figma.com/" target="_blank">Figma</a></li>
+  <li><a href="https://docs.google.com/" target="_blank">Google Docs</a></li>
+  <li><a href="https://stock.adobe.com/" target="_blank">Adobe Stock</a></li>
+  <li><a href="https://giphy.com/" target="_blank">GIPHY</a></li>
+  <li><a href="https://coolors.co/" target="_blank">Coolors</a></li>
+  <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+  <li><a href="https://www.adobe.com/products/premiere/free-trial-download.html" target="_blank">Adobe Premiere Pro</a></li>
+  <li><a href="https://www.adobe.com/products/photoshop.html" target="_blank">Adobe Photoshop</a></li>
+  <li><a href="https://www.flaticon.com/" target="_blank">Flaticon</a></li>
   <li><a href="https://www.freeconvert.com/video-compressor 
-">Freeconvert</a></li>
-  <li><a href="https://prettier.io/">Prettier js</a></li>
-  <li><a href="https://www.vhv.rs/">Vhv.rs</a></li>
-  <li><a href="https://www.kapwing.com/ ">Kapwing</a></li>
-  <li><a href="https://www.pngwing.com/">PNGWING</a></li>  
+" target="_blank">Freeconvert</a></li>
+  <li><a href="https://prettier.io/" target="_blank">Prettier js</a></li>
+  <li><a href="https://www.vhv.rs/" target="_blank">Vhv.rs</a></li>
+  <li><a href="https://www.kapwing.com/" target="_blank">Kapwing</a></li>
+  <li><a href="https://www.pngwing.com/" target="_blank">PNGWING</a></li>  
  </ul>
 
 <h3>Planning Process</h3>
