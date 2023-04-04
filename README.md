@@ -11,15 +11,13 @@
 
 <p>Questions switch to the next as soon as the user selects an answer. Note: Users cannot return to the previous question and answer.</p>
 
-<p>At the end of 'Round One' and 'Round Two', the user is greeted with a pop-up message which requires decision-making—continue the game or end the game. If the user continues the game, The next round will begin and points from the previous round(s) will be transferred. However, if the user ends the game, the results page is displayed. All points the user accumulated before ending the game are calculated and displayed as a percentage. The results page also displays if the user has won or lost the game.</p>
-
-<p>When the pop-up message appears onscreen, the background is blurred, the background music stops and users cannot interact with the background unless they click the 'Continue' button. When the 'Continue' button is clicked, the music resumes and the background is unblurred.</p>
+<p>At the end of 'Round One' and 'Round Two', the user is greeted with a pop-up message which requires decision-making—continue the game or end the game. When the pop-up message appears onscreen, the background is blurred, the background music stops and users cannot interact with the background unless they click the 'Continue' button. When the 'Continue' button is clicked, the buttons in the background are enabled, the music resumes and the background is unblurred. Also, if the user continues the game, the next round will begin and points from the previous round(s) will be transferred. However, if the user ends the game, the results page is displayed. All points the user accumulated before ending the game are calculated and displayed as a percentage. The results page also displays if the user has won or lost the game.</p>
 
 <p>Each round has a pass mark of 83%. The user, therefore, wins the game if: </p>
   <ul>
-    <li> They've scored 5/6 (83%) or more for 'Round One'</li>
-    <li> They've scored 10/12 (83%) or more for 'Round Two'</li>
-    <li> They've scored 15/18 (83%) or more for 'Round Three' </li>
+    <li> They've scored 5/6 (83%) or more for 'Round One'.</li>
+    <li> They've scored 10/12 (83%) or more for 'Round Two'.</li>
+    <li> They've scored 15/18 (83%) or more for 'Round Three'.</li>
    </ul>
  
  <p>The 'Exit Game' button allows users to leave the game, and return to the start page without receiving a result. </p>
@@ -47,7 +45,7 @@
  </ul>
 
 <h3>Planning Process</h3>
-<p>Google docs was used to make note of the game's logic, objects, and features. Then, prototypes of the game's pages were designed via Figma. The game's colors were sourced on Coolors; and since some design ideas were purely imaginative,i.e they could not be sourced online, I utilized Adobe PhotoShop and Premiere Pro to bring my vision to fruition.</p>
+<p>Google docs was used to make note of the game's logic, objects, and features. Then, prototypes of the game's web pages were designed via Figma. The game's colors were sourced on Coolors; and since some design ideas were purely imaginative, i.e., they could not be sourced online. I, therefore, utilized Adobe PhotoShop and Premiere Pro to bring my vision to fruition.</p>
 
 <h3>Wireframe</h3>
 <img src="/Wireframe-ReadMe.png">
@@ -58,11 +56,12 @@
     <li> Go to my repository, and click on the green, drop-down 'Code' button in the upper right corner.</li> 
     <li>Under the 'Local' tab, copy the URL provided under 'Clone'.</li> 
     <li>Open Git Bash.</li> 
-    <li>Type the command 'git clone' and paste the URL beside it, e.g. git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY </li> 
+    <li>Type the command 'git clone' and paste the URL beside it, e.g. git clone https://github.com/your-username/your-repository</li> 
     <li>The repository is now cloned on your local computer.</li>
 </ol>
 
-<p> You can also follow step 1 of the installation process, then: </p>
+<p> Another means of installation⬇️</p>
+<p>Follow step 1 of the previous installation process, then: </p>
 <ol>
   <li> Under the 'Local' tab, select 'Download ZIP'.</li>
   <li>After extracting (unzipping) the file, open the folder in your source-code editor.</li> 
@@ -77,22 +76,17 @@
 
 <li><b>User Input/Regex:</b> Clearing the user's name from the input text field after they have exited the game and refreshed the page to play again. While I was able to clear the previous user's name from the input text field and disable the button so that it could only be enabled with the correct user input; I noticed that it was not registering the regex pattern that worked upon initially entering the game. My tutor pointed out to me that the approach I used to clear the input value contains a space, and since my regex pattern does not allow spaces, the start button would not be enabled.</li>
 
-<li><b>Media Formats in JavaScript:</b> Adding audio in the DOM cleared up a few misconceptions I had about its methods, for example, one cannot stop an audio file with a stop() method because it does not exist. It can be added instead with the pause() method. In addition, wanting to pause and play the audio to work in sync with my pop-up message, introduced me to the Promise object, a topic currently beyond my scope that I encountered. My plan to have the audio stop when users arrived on the results page caused a Promise error which was rectified by using the setTimeout method on the function that hosts my pause audio method. I added this at the end of the function that determines the user's final points</li>
+<li><b>Media Formats in JavaScript:</b> Adding audio in the DOM cleared up a few misconceptions I had, for example, one cannot stop an audio file with a stop() method because it does not exist. It can be added instead with the pause() method. In addition, wanting to pause and play the audio to work in sync with my pop-up message, introduced me to the Promise object, a topic currently beyond my scope. My plan to have the audio stop when users arrive on the results page caused a Promise error which was rectified by using the setTimeout method on the function that hosts my pause audio method. I added this at the end of the function that determines the user's final points</li>
 </ul>
 
 <h4>Design Challenges</h4>
 <ul>
-<li><b>Visibility vs Display:</b> Since I limited my files to one HTML, one CSS, and one JS, I found that implementing the two properties would be the best way to approach this project. However, I had little understanding of what each property does, and, for this reason, it was quite difficult to understand why the results' page was showing at the top of the quiz container. I realized, after much research, that the results page needed to have a property value of "display: none"; so that it does not take up the space that my quiz container needs; while the quiz container needs a property value of visibility = "visible"; so that it takes up all the space in the layout. Here is a great explanation of both <a href="https://www.tutorialrepublic.com/css-tutorial/css-visibility.php">visibility and display</a>. 
+<li><b>Visibility vs Display:</b> Since I limited my files to one HTML, one CSS, and one JS, I found that implementing the two properties would be the best way to approach this project. However, I had little understanding of what each property does, and, for this reason, it was quite difficult to understand why the results' page was showing at the top of the quiz container. I realized, after much research, that the results page needed to have a property value of "display: none"; so that it does not take up the space that my quiz container needed; while the quiz container needed a property value of visibility = "visible"; so that it takes up all the space in the layout. Here is a great explanation of both <a href="https://www.tutorialrepublic.com/css-tutorial/css-visibility.php">visibility and display</a>. 
   
-This issue singled-handily caused other problems with the results page. Once the pages were given their proper properties and values, it became much easier to move forward with my design.</li>
+This issue singled-handily caused other problems with the results page. Once the pages were given their correct properties and values, it became much easier to move forward with my design.</li>
 </ul>
 
 <h3>Credits</h3>
 <p>Special thanks to my Instructor Tishana Trainor for assigning me this project to help foster a good understanding of HTML5, CSS3, and JavaScript; and my TAs Dylan Comeau and Kasper Kain for helping me understand/solve some issues I faced with the JavaScript section of my project. Many thanks also to my classmates <a href="https://github.com/tamara-703">Tamara Saadeh</a> and <a href="https://github.com/AnujaBujurge29">Anuja Bujurge</a> for taking the time to assist me whenever I needed help.</p>
 
 <p>Overall, this project has taught me a lot about effectively planning before implementing code as this saves time and will, in the future, save money. It is clear that every aspect of a website/web application needs to be thought of. For instance, my pop-up box allows the game's backdrop to be blurred. This visually alludes to the idea that the backdrop is disabled until the user exists the pop-up message. However, the appearance of a blurred backdrop is, in actuality, pointless if all elements linked to events are not disabled. Functionality is key. This project has, therefore, not only revealed my capabilities but also my constraints and the areas I need to improve.</p>
-
-
-<!-- + Unsolved Problems? Error from console at the end of 'Round Three'. It reads, "Uncaught TypeError: Cannot read properties of undefined (reading 'question')
-    at generateQuestions (main.js:412:49)
-    at main.js:455:7". I am not sure how to fix this at the moment of writing this. + -->
