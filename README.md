@@ -72,8 +72,16 @@ This issue singled-handedly caused other problems with the results' page. Once t
 </ul>
 
 <h3>Credits</h3>
+<!-- + Special thanks to my Instructor Tishana Trainor for assigning me this project to help foster a good understanding of HTML5, CSS3 and JavaScript; and my TAs Dylan Comeau and Kasper Kain for helping me understand / solve some issues I faced with the JavaScript section of my project. Many thanks also to my classmates Tamara **** and Anuja for taking the time out to assist me whenever I needed help.
+
+ Overall, this project has taught me a lot about effectively planning before implementing code as this saves time and will, in the future, save money.
++ -->
+
 
 <h3>License</h3>
+<!-- + A short snippet describing the license (MIT, Apache etc)
+
+MIT © Yourname + -->
 
 <!-- + Unsolved Problems? Error from console at the end of 'Round Three'. It reads, "Uncaught TypeError: Cannot read properties of undefined (reading 'question')
     at generateQuestions (main.js:412:49)
