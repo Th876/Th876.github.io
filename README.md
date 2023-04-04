@@ -44,12 +44,15 @@
   <li><a href="https://www.pngwing.com/">PNGWING</a></li>  
  </ul>
 
+<hr></hr>
 <h3>Planning Process</h3>
 <p>Google docs was used to make note of the game's logic, objects, and features. Then, prototypes of the game's web pages were designed via Figma. The game's colors were sourced on Coolors; and since some design ideas were purely imaginative, i.e., they could not be sourced online. I, therefore, utilized Adobe PhotoShop and Premiere Pro to bring my vision to fruition.</p>
 
+<hr></hr>
 <h3>Wireframe</h3>
 <img src="/Wireframe-ReadMe.png">
 
+<hr></hr>
 <h3>Installation</h3>
 <p>To install this project: 
   <ol>
@@ -68,6 +71,7 @@
   <li>Use Live Server/Go Live in your source code editor to start playing the game.</li>
 </ol>
 
+<hr></hr>
 <h3>Challenges</h3>
 
 <h4>Functionality Challenges</h4>
@@ -86,6 +90,7 @@
 This issue singled-handily caused other problems with the results page. Once the pages were given their correct properties and values, it became much easier to move forward with my design.</li>
 </ul>
 
+<hr></hr>
 <h3>Credits</h3>
 <p>Special thanks to my Instructor Tishana Trainor for assigning me this project to help foster a good understanding of HTML5, CSS3, and JavaScript; and my TAs Dylan Comeau and Kasper Kain for helping me understand/solve some issues I faced with the JavaScript section of my project. Many thanks also to my classmates <a href="https://github.com/tamara-703">Tamara Saadeh</a> and <a href="https://github.com/AnujaBujurge29">Anuja Bujurge</a> for taking the time to assist me whenever I needed help.</p>
 
