@@ -20,9 +20,10 @@ const inputName = document.getElementById("input-name");
 inputName.style.textAlign = "center";
 
 //Test validation for name input field via Start Quiz button status
+let regex = /^[a-zA-Z]+(-[a-zA-Z]+)?$/;
 inputName.addEventListener("input", function (e) {
   //matching letters for a first name with or without hyphen & no space
-  let regex = /^[a-zA-Z]+(-[a-zA-Z]+)?$/;
+  // let regex = /^[a-zA-Z]+(-[a-zA-Z]+)?$/;
 
   // If name matches regex, button is enabled and user can start game
   if (inputName.value.match(regex)) {
@@ -33,6 +34,37 @@ inputName.addEventListener("input", function (e) {
   }
 });
 
+//Warning message for users' input
+let nameInputBox = document.querySelector(".name-input-box");
+let warningMsgSpace = document.createElement("p");
+warningMsgSpace.classList.add("warning-msg");
+warningMsgSpace.textContent = "No Space Allowed.";
+warningMsgSpace.style.color = "var(--red)";
+warningMsgSpace.style.fontSize = "0.9rem";
+warningMsgSpace.style.marginTop = "-117px";
+warningMsgSpace.style.marginLeft = "-120px";
+nameInputBox.appendChild(warningMsgSpace);
+warningMsgSpace.style.visibility = "hidden";
+
+let warningMsgHyphen = document.createElement("p");
+warningMsgHyphen.classList.add("warning-msg-hyphen");
+warningMsgHyphen.textContent = "Hyphen Allowed.";
+warningMsgHyphen.style.color = "var(--highlighter)";
+warningMsgHyphen.style.fontSize = "0.8rem";
+warningMsgHyphen.style.marginTop = "-70px";
+warningMsgHyphen.style.marginLeft = "110px";
+warningMsgHyphen.style.fontWeight = "lighter";
+nameInputBox.appendChild(warningMsgHyphen);
+warningMsgHyphen.style.visibility = "hidden";
+
+
+inputName.addEventListener("input", function (e) { 
+  if (inputName.value !== "") {
+    warningMsgSpace.style.visibility = "visible";
+    warningMsgHyphen.style.visibility = "visible";
+  } 
+  });
+
 //Display Quiz page when Start game button is clicked
 startBtn.addEventListener("click", function (e) {
   startContainer.style.visibility = "hidden";
@@ -42,12 +74,14 @@ startBtn.addEventListener("click", function (e) {
 });
 
 /*-------------------------Quiz Questions and Answers-------------------------*/
-//Get input (user's name) and display on quiz game page
+//Get input (user's name) and display on quiz game page. Remove user warnings, generate question and answers and start background music when user clicks the start button
 startBtn.addEventListener("click", function (e) {
   if (inputName.value !== " ") {
     let name = document.querySelector(".player-name");
     name.textContent = "Player: " + inputName.value;
   }
+  warningMsgSpace.style.visibility = "hidden";
+  warningMsgHyphen.style.visibility = "hidden";
   generateQuestions();
   quizMusic();
 });
