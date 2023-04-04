@@ -514,7 +514,7 @@ h1 {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1519px) {
     #ques-container {
         height: 400px;
         width: 630px;
