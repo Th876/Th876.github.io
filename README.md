@@ -25,8 +25,8 @@
  <hr></hr>
  <h3>Technologies used:</h3>
  <ul>
-  <li>Scripting/Programming languages: HTML, CSS, JavaScript</li>
-  <li><a href="https://developer.chrome.com/docs/devtools/open/"></a>Chrome DevTools</li>
+  <li>Scripting/Programming languages: <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a href="https://en.wikipedia.org/wiki/CSS">CSS</a>, <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a></li>
+  <li><a href="https://developer.chrome.com/docs/devtools/open/">Chrome DevTools</a></li>
   <li><a href="https://www.rd.com/article/movie-trivia-facts/">Reader’s Digest</a></li>
   <li><a href="https://www.figma.com/">Figma</a></li>
   <li><a href="https://docs.google.com/">Google Docs</a></li>
@@ -57,8 +57,8 @@
 <ul>
 <li><b>Targeting HTML elements in the DOM:</b> There were certain features I wanted to implement but found them difficult to achieve. This made me realize that I had little knowledge on how to use Chrome DevTools to target the HTML elements. This frustration led me to seek help from my classmates and have since expanded my knowledge in the children property, bracket and dot notation, functions, and conditionals.</li>
 
-<li><b>User Input/Regex Issue:</b> Clearing the user's name from the input text field after they have exited the game and refreshed the page to play again. While I was able to clear the previous user's name from the input text field, and disable the button so that it could only be enabled with the correct user input; I noticed that it was not registering the regex pattern that worked upon initially entering the game. My tutor had pointed out to me that the approach I used to clear the input value contains a space, and since my regex pattern does not allow spaces, the start button would not be enabled.</li>
-<li></li>
+<li><b>User Input/Regex:</b> Clearing the user's name from the input text field after they have exited the game and refreshed the page to play again. While I was able to clear the previous user's name from the input text field, and disable the button so that it could only be enabled with the correct user input; I noticed that it was not registering the regex pattern that worked upon initially entering the game. My tutor had pointed out to me that the approach I used to clear the input value contains a space, and since my regex pattern does not allow spaces, the start button would not be enabled.</li>
+<li><b>Media Formats in JavaScript:</b>Adding audio in the DOM cleared up a few misconceptions I had about its methods, for example, one cannot stop an audio with a stop() method because it does not exist. It can be added instead with the pause() method. In addition, wanting to pause and play the audio to work in sync with my pop up message, introduced me to the Promise object, a topic currently beyond my scope that I encountered. My plan to have the audio stop when users arrived on the results page caused a Promise error which was rectified by using the setTimeout method on the function hosts my pause audio method. I added this at the end of the function that determines the user's final points</li>
 </ul>
 
 <h4>Design Challenges</h4>
