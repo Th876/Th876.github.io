@@ -2,7 +2,7 @@
 <p> The Best Movie Trivia Game is the first project I created at <a href="https://perscholas.org/courses/software-engineer/software-engineer-atlanta/">Per Scholas'</a> Software Engineer Training.</p> The game has three rounds and consists of 18 movie questions in total. Each question has two option answers. This is the <a href= "https://th876.github.io/triviagame/">website link</a> for my game project.
 <hr></hr>
 <h3>Game Features</h3>
-<p>On the main page, the 'Start Game' button is disabled, which prompts the user to enter a name in order to play. As the user types a name, a warning message is displayed to ensure that an acceptable name format is given. This name is later displayed on the quiz page as, for example, 'Player: Anna'.</p>
+<p>On the main page, the 'Start Game' button is disabled, which prompts the user to enter a name in order to play. As the user types a name, a warning message is displayed to ensure that an acceptable name format is given. What is not accepted is colored red and what is accepted is colored green. This name is later displayed on the quiz page as, for example, 'Player: Anna'.</p>
 
 <p>The trivia quiz begins at 'Round One' where the user can hear music playing softly in the background. The user's name and score is located to the left of the screen; and an 'Exit Game' button is located directly under the question and answer content.<p>  
 
@@ -26,6 +26,7 @@
  <h3>Technologies used:</h3>
  <ul>
   <li>Scripting/Programming languages: HTML, CSS, JavaScript</li>
+  <li><a href="https://developer.chrome.com/docs/devtools/open/"></a>Chrome DevTools</li>
   <li><a href="https://www.rd.com/article/movie-trivia-facts/">Reader’s Digest</a></li>
   <li><a href="https://www.figma.com/">Figma</a></li>
   <li><a href="https://docs.google.com/">Google Docs</a></li>
@@ -52,4 +53,21 @@
 
 <h3>Challenges</h3>
 
-<!-- + Unsolved Problems? + -->
+<h4>Functionality Challenges</h4>
+<ul>
+<li><b>Targeting HTML elements in the DOM:</b> There were certain features I wanted to implement but found them difficult to achieve. This made me realize that I had little knowledge on how to use Chrome DevTools to target the HTML elements. This frustration led me to seek help from my classmates and have since expanded my knowledge in the children property, bracket and dot notation, functions, and conditionals.</li>
+
+<li><b>User Input/Regex Issue:</b> Clearing the user's name from the input text field after they have exited the game and refreshed the page to play again. While I was able to clear the previous user's name from the input text field, and disable the button so that it could only be enabled with the correct user input; I noticed that it was not registering the regex pattern that worked upon initially entering the game. My tutor had pointed out to me that the approach I used to clear the input value contains a space, and since my regex pattern does not allow spaces, the start button would not be enabled.</li>
+<li></li>
+</ul>
+
+<h4>Design Challenges</h4>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<!-- + Unsolved Problems? Error from console at the end of 'Round Three'. It reads, "Uncaught TypeError: Cannot read properties of undefined (reading 'question')
+    at generateQuestions (main.js:412:49)
+    at main.js:455:7". I am not sure how to fix this at the moment of writing this. + -->
